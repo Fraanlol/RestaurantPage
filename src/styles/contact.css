@@ -1,0 +1,19 @@
+.info{
+    display:flex;
+    flex-flow: row;
+    align-items: center;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.info--icon{
+    margin: 1rem;
+}
+
+i{
+    color:var(--milanga-color);
+}
+
+.info--text{
+    color:white;
+}

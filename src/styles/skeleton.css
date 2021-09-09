@@ -1,0 +1,151 @@
+:root{
+    --text-color: #eee;
+    --milanga-color: rgb(241, 191, 114);
+    --background-color: rgba(0, 0, 0, 0.9);
+    --background-light: rgba(0, 0, 0, 0.6);
+}
+@font-face {
+    font-family: "Tangerine";
+    src: url('../assets/fonts/tangerine-v12-latin-700.woff') format('woff'),
+            url('../assets/fonts/tangerine-v12-latin-700.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family:unset;
+}
+body{
+    padding:0;
+    margin:0;   
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+main{
+    max-width: 900px;
+    margin:3rem auto;
+    background-color: var(--background-light);
+    border: 1px solid #333;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #222;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+.navBar{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-flow: row;
+    background-color: var(--background-color);
+    padding:2rem;
+    border-bottom: 2px solid rgb(124, 54, 32);
+}
+
+.titleContainer--title{
+    font-size: 10rem;
+    font-family:"Tangerine", bold;
+    padding:0;
+    margin: 0;
+    color:var(--milanga-color);
+}
+
+.titleSub{
+    font-size: 1.3rem;
+    font-family: monospace;
+    color:var(--text-color);
+    text-align: center;
+}
+
+
+.itemsMenu--list{
+    display:flex;
+    padding:0;
+    margin-top: 1rem;
+}
+
+button{
+    cursor: pointer;
+    border-style: none;
+    outline: none;
+}
+
+.itemsMenu--list > button.active{
+    border-bottom: 1px solid var(--text-color);
+    color:var(--milanga-color);
+
+}
+.itemsMenu--list > button{
+    list-style-type: none;
+    font-size: 3rem;
+    margin: 0 1rem;
+    color:var(--text-color);
+    background-color: transparent;
+    padding:1rem;
+    transition: transform 0.3s;
+    border-bottom: 1px solid transparent;
+}
+
+.itemsMenu--list > button:hover{
+    transform: translateY(-10px);
+}
+
+footer{
+    background-color: var(--background-color);
+    display:flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.footer--information{  
+    color:var(--text-color);
+    font-size: 2rem;
+    margin: 10px;
+}
+
+.fab{
+    color:white;
+    transform: scale(2);
+}
+
+@media (max-width:950px){
+    main{
+        margin: 3rem 2rem;
+    }
+}
+
+@media (max-width: 750px){
+    .navBar{
+        flex-flow: column;
+    }
+}
+
+@media (max-width: 480px){
+    .itemsMenu--list > button{
+        font-size: 2rem;
+    }
+    .welcomeText{
+        font-size: 2.5rem;
+        padding:1rem;
+    }
+}
